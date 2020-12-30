@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aee9c35122abd23458ddb18edd496d6a, type: 3}
+  m_Name: ItemDatabase
+  m_EditorClassIdentifier: 
+  items:
+  - {fileID: 114290950721614468, guid: 3fc8fa3c2687e7141888742448787cc1, type: 2}
+  - {fileID: 114784159784733234, guid: fd696f15acae81843bb1ad3fe4a10c07, type: 2}
+  - {fileID: 114281601675376336, guid: a6764868f3abccb4eb1dcefd25fd36d1, type: 2}
+  - {fileID: 114373290664947298, guid: 58506a789d9e9a841af94e21c9b07ffc, type: 2}
+  - {fileID: 114998294669093050, guid: 296c8fb3449093644bfa4906706891ba, type: 2}
+  - {fileID: 114930132863722730, guid: 97884fb06bb50f14d90bb022491d3635, type: 2}
+  - {fileID: 114015705794043378, guid: cc62c1bbfd3b6fa42b79cef734eb0562, type: 2}
+  - {fileID: 114904811939563496, guid: 8236b2d23b8d4eb48b664219e24b0afe, type: 2}
+  - {fileID: 114934937305214084, guid: cc67893523b067e418de4c04e9e298db, type: 2}
+  - {fileID: 114501431300707732, guid: 6d7c2ba098701da4296ce2dcec314f43, type: 2}
+  - {fileID: 114453045310551988, guid: 4672b703c51ae094c88cdcb043f7a2ad, type: 2}
+  - {fileID: 114249044792137462, guid: ae7b7abfdc22f5e45b0512214899af95, type: 2}
+  rarities:
+  - {fileID: 11400000, guid: 3268806f3d7c0ee4897307a1b1d0f87c, type: 2}
+  - {fileID: 11400000, guid: 2463bbc74e3af2a40b0b512f9151a05c, type: 2}
+  categories:
+  - {fileID: 11400000, guid: b776477121f9466418c708ec091153f0, type: 2}
+  - {fileID: 11400000, guid: 52fe6748be0ea944fb70fc5b83d46075, type: 2}
+  - {fileID: 11400000, guid: 758f2b3c60413e940ad8b020a05773ed, type: 2}
+  - {fileID: 11400000, guid: 7781c1f1680cf464db0e6b2eb60d03c8, type: 2}
+  statDefinitions:
+  - {fileID: 11400000, guid: f4478f5770107c54890c25f42df664cc, type: 2}
+  - {fileID: 11400000, guid: 84e92c525eb00814c91e6cb5a344ebdf, type: 2}
+  - {fileID: 11400000, guid: d32b4c1731b85324183ae49b6e9474c0, type: 2}
+  equipmentTypes:
+  - {fileID: 11400000, guid: 4ee97a6435d16b140b86a177340ee768, type: 2}
+  - {fileID: 11400000, guid: a5e5c8fd2b0cf274794fb9f417a93679, type: 2}
+  - {fileID: 11400000, guid: 16f179d5650d88d4a983c1b320ab8999, type: 2}
+  craftingCategories: []
+  currencies:
+  - {fileID: 11400000, guid: c113462fd4a290f4094b72449670cf1e, type: 2}
+  itemRarities: []
+  itemCategories: []
+  itemProperties: []
+  equipTypes: []
+  inventoryCraftingCategories: []
+  inventoryCurrencies: []
