@@ -57,12 +57,11 @@ namespace NeoFPS.InvProIntegration
         struct DataOverride
         {
             public string name;
-            public float defaultValue;
             public IStat stat;
 
-            public float GetValue()
+            public float GetValue(float input)
             {
-                return defaultValue * (stat.currentValue / 100f);
+                return input * (stat.currentValue / 100f);
             }
         }
 
@@ -87,17 +86,16 @@ namespace NeoFPS.InvProIntegration
             yield return null;
             m_SpeedStat = m_InventoryPlayer.stats.Get(m_SpeedStatCategory, m_SpeedStatName);
             m_StrengthStat = m_InventoryPlayer.stats.Get(m_StrengthStatCategory, m_StrengthStatName);
-            m_MotionController.motionGraph.ApplyDataOverrides(this);
+            m_MotionController.motionGraph.AddDataOverrides(this);
         }
 
-        public Func<float> GetFloatOverride(FloatData data)
+        public Func<float, float> GetFloatOverride(FloatData data)
         {
             // Check if it's a registered speed data entry
             for (int i = 0; i < speedOverrides.Length; ++i)
             {
                 if (speedOverrides[i].name == data.name)
                 {
-                    speedOverrides[i].defaultValue = data.value;
                     speedOverrides[i].stat = m_SpeedStat;
                     return speedOverrides[i].GetValue;
                 }
@@ -108,7 +106,6 @@ namespace NeoFPS.InvProIntegration
             {
                 if (strengthOverrides[i].name == data.name)
                 {
-                    strengthOverrides[i].defaultValue = data.value;
                     strengthOverrides[i].stat = m_StrengthStat;
                     return strengthOverrides[i].GetValue;
                 }
@@ -117,12 +114,12 @@ namespace NeoFPS.InvProIntegration
             return null;
         }
 
-        public Func<bool> GetBoolOverride(BoolData data)
+        public Func<bool, bool> GetBoolOverride(BoolData data)
         {
             return null;
         }
 
-        public Func<int> GetIntOverride(IntData data)
+        public Func<int, int> GetIntOverride(IntData data)
         {
             return null;
         }

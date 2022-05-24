@@ -149,6 +149,16 @@ namespace NeoFPS.InvProIntegration
             SetHealth(health - damage, critical, source);
         }
 
+        public void AddDamage(float damage, bool critical, RaycastHit hit)
+        {
+            AddDamage(damage, critical, null);
+        }
+
+        public void AddDamage(float damage, bool critical, IDamageSource source, RaycastHit hit)
+        {
+            AddDamage(damage, critical, source);
+        }
+
         public void AddHealth(float h)
         {
             AddHealth(h, null);

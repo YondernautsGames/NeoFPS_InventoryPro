@@ -9,6 +9,8 @@ namespace NeoFPS.InvProIntegration
         public event Action<InventoryPlayer> onAddedToCharacter;
         public event Action<InventoryPlayer> onRemovedFromCharacter;
 
+        private IWieldable m_Wieldable = null;
+
         public NeoInventoryFirstPersonItemHandler handler
         {
             get;
@@ -21,14 +23,21 @@ namespace NeoFPS.InvProIntegration
             private set;
         }
 
+        private void Awake()
+        {
+            m_Wieldable = GetComponent<IWieldable>();
+        }
+
         public void Equip()
         {
             gameObject.SetActive(true);
+            m_Wieldable.Select();
         }
 
         public void Unequip()
         {
             gameObject.SetActive(false);
+            m_Wieldable.DeselectInstant();
         }
 
         public void Attach(NeoInventoryFirstPersonItemHandler h, NeoInventoryEquippableItem i)

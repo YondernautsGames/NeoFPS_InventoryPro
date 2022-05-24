@@ -284,6 +284,7 @@ MonoBehaviour:
   m_StepMaxAngle: 30
   m_GroundSnapHeight: 0.3
   m_StickToGround: 1
+  m_GroundHitLookahead: 0.005
   m_PushRigidbodies: 1
   m_LowRigidbodyPushMass: 10
   m_MaxRigidbodyPushMass: 200
@@ -312,7 +313,10 @@ MonoBehaviour:
   m_DataOverrides: {fileID: 0}
   m_UseCrouchJump: 1
   m_ManualInitialisation: 0
+  m_BodyAnimator: {fileID: 0}
   m_UpperBodyRoot: {fileID: 3461176169354120119}
+  m_UpperBodyTarget: {fileID: 0}
+  m_HeightAnimFloat: 
   m_OnMotionGraphStateChange:
     m_PersistentCalls:
       m_Calls: []
@@ -485,14 +489,18 @@ MonoBehaviour:
   m_EnableChargedJump: 0
   m_JumpChargeTime: 0.25
   m_ToggleLean: 1
+  m_NoInputCancelsSprint: 0
   m_JumpKey: jump
   m_JumpChargeKey: 
   m_JumpHoldKey: 
   m_CrouchKey: crouch
   m_CrouchHoldKey: 
   m_SprintKey: sprint
+  m_SprintHoldKey: sprintHold
   m_DodgeLeftKey: 
   m_DodgeRightKey: 
+  m_AbilityKey: ability
+  m_CustomInputs: []
 --- !u!114 &114523438558155190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -534,7 +542,7 @@ MonoBehaviour:
     equipTransform: {fileID: 8721445428005986160}
     rootBone: {fileID: 1751389423568988637}
   isPlayerDynamicallyInstantiated: 0
-  dontDestroyOnLoad: 1
+  dontDestroyOnLoad: 0
   _deathDropObjectPrefab: {fileID: 0}
   _equipmentHandler: {fileID: 11400000, guid: 0a1a221f6f406d549801fdfeef24f387, type: 2}
   _waitFramesBeforeInit: 0
@@ -1144,14 +1152,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_MaxLeanAngle: 20
-  m_PivotOffset: -1
   m_LeanSpeed: 0.4
+  m_WeaponTilt: 1
+  m_HeadCounterTilt: 0.5
   m_RequiredClearance: 1
   m_CancelIfBlocked: 1
   m_ResetSpeedStanding: 4
   m_ResetSpeedCrouching: 1.5
   m_CanLeanKey: canLean
   m_IsCrouchingKey: isCrouching
+  m_PivotOffset: -1
 --- !u!114 &1362582668661617157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1266,9 +1276,10 @@ Camera:
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_GateFitMode: 2
   m_FocalLength: 50
   m_NormalizedViewPortRect:
     serializedVersion: 2
@@ -1709,14 +1720,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86ab9307d890d9d48870d799bc818556, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Camera: {fileID: 169430282613372515}
-  m_AudioListener: {fileID: 3316546996128321688}
   m_AimTransform: {fileID: 796159687981317996}
-  m_PreviousCameraAction: 0
-  m_DefaultFoV: 50.625
   m_OffsetTransform: {fileID: 3365006589718366178}
   m_AimPositionEffectMultiplier: 0.25
   m_AimRotationEffectMultiplier: 0.25
+  m_Camera: {fileID: 169430282613372515}
+  m_PreviousCameraAction: 0
+  m_AudioListener: {fileID: 3316546996128321688}
 --- !u!114 &675368069150034288
 MonoBehaviour:
   m_ObjectHideFlags: 0
