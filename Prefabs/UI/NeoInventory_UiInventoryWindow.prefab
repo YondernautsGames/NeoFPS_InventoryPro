@@ -1786,8 +1786,6 @@ MonoBehaviour:
     amount: 5
   - item: {fileID: 114249044792137462, guid: ae7b7abfdc22f5e45b0512214899af95, type: 3}
     amount: 5
-  - item: {fileID: 114934937305214084, guid: cc67893523b067e418de4c04e9e298db, type: 3}
-    amount: 250
   useForceSet: 0
 --- !u!114 &114304770167182026
 MonoBehaviour:
