@@ -56,6 +56,12 @@ namespace NeoFPS.InvProIntegration
             m_Source = null;
         }
 
+        public bool invincible
+        {
+            get;
+            set;
+        } = false;
+
         private bool m_IsAlive = true;
         public bool isAlive
         {
@@ -94,12 +100,15 @@ namespace NeoFPS.InvProIntegration
 
         void SetHealth(float to, bool crit, IDamageSource source)
         {
-            if (to < 0f)
-                to = 0f;
+            if (!invincible || to >= m_HealthStat.currentValue)
+            {
+                if (to < 0f)
+                    to = 0f;
 
-            m_Critical = crit;
-            m_Source = source;
-            m_HealthStat.SetCurrentValueRaw(to);
+                m_Critical = crit;
+                m_Source = source;
+                m_HealthStat.SetCurrentValueRaw(to);
+            }
         }
 
         public float healthMax
